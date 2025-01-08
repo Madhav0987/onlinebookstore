@@ -12,7 +12,7 @@ pipeline {
         }
 		stage('building artifact and unit testing'){
 		    steps{
-			    sh 'mvn clean package
+			    sh 'mvn clean package'
 				}
 			}
 		stage('Sonarqube analysis'){
