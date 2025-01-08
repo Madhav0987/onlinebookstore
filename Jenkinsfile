@@ -18,7 +18,7 @@ pipeline {
 		stage('Sonarqube analysis'){
 	     steps{
 	         withSonarQubeEnv('Sonar-server') {
-	             sh ''' $SCANNER_HOME/bin/sonar-scanner -Dsonar.url=http://15.207.107.47:9000/ -Dsonar.projectName="Java WebApp" \
+	             sh ''' $SCANNER_HOME/bin/sonar-scanner -Dsonar.url=http://13.201.15.173:9000/ -Dsonar.projectName="Java WebApp" \
 	              -Dsonar.java.binaries=. \
                   -Dsonar.projectKey=Java-WebApp '''
 
