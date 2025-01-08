@@ -48,7 +48,7 @@ pipeline {
             }
         }
 
-        stage('deplyoing app to kubernetes){
+        stage('deplyoing app to kubernetes'){
 		    steps{
 			  withKubeConfig([credentialsId: 'kubeconfig-secret-id']) {
                     sh 'kubectl apply -f deployment.yaml'
