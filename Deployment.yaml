@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+   name: nginx
+   labels: 
+     app: ubuntu-ds
+   spec:
+   replicas: 2
+   selector: 
+      matchLabels:
+         app: ubuntu-ds
+template:
+ metadata:
+   name: nginx
+   labels:
+     app: ubuntu-ds
+   spec: 
+   containers:
+     - name: My-container
+       image: 515966525347.dkr.ecr.ap-south-1.amazonaws.com/assignment:v1
+       ports:
+         containerPort: 80
