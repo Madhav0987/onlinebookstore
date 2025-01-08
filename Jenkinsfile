@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('Checkout Source Code') {
             steps {
-                git branch: 'main', changelog: false, poll: false, url: 'https://github.com/Madhav0987/docker-dec-22.git'
+                git changelog: false, poll: false, url: 'https://github.com/Madhav0987/onlinebookstore.git'
             }
         }
 		stage('building artifact and unit testing'){
